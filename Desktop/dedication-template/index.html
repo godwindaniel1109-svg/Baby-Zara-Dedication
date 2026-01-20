@@ -81,6 +81,7 @@
             justify-content: center;
             min-width: 0;
             text-align: center;
+            order: 1;
         }
 
         .card-image-wrapper {
@@ -88,6 +89,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            order: 2;
         }
 
         .card-image {
@@ -207,6 +209,7 @@
             padding-top: 10px;
             border-top: 1px solid rgba(102, 126, 234, 0.2);
             font-family: 'Poppins', sans-serif;
+            order: 3;
         }
 
         .contact-title {
@@ -262,6 +265,34 @@
             body {
                 overflow: hidden;
             }
+            
+            .invitation-card {
+                display: grid;
+                grid-template-columns: 1fr auto;
+                grid-template-rows: 1fr;
+                gap: 30px;
+            }
+            
+            .card-content {
+                order: 1;
+                grid-column: 1;
+                grid-row: 1;
+                display: flex;
+                flex-direction: column;
+            }
+            
+            .card-image-wrapper {
+                order: 2;
+                grid-column: 2;
+                grid-row: 1;
+            }
+            
+            .contact-info {
+                order: 1;
+                grid-column: 1;
+                grid-row: 1;
+                align-self: end;
+            }
         }
 
         /* Tablet and smaller desktop */
@@ -278,6 +309,19 @@
                 border-radius: 15px;
                 max-height: none;
                 flex-direction: column;
+                display: flex;
+            }
+            
+            .card-content {
+                order: 1;
+            }
+            
+            .card-image-wrapper {
+                order: 2;
+            }
+            
+            .contact-info {
+                order: 3;
             }
 
             .card-image {
@@ -332,6 +376,19 @@
                 box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
                 max-height: none;
                 flex-direction: column;
+                display: flex;
+            }
+            
+            .card-content {
+                order: 1;
+            }
+            
+            .card-image-wrapper {
+                order: 2;
+            }
+            
+            .contact-info {
+                order: 3;
             }
 
             .card-image {
@@ -564,22 +621,22 @@
             </div>
 
             <div class="ornament">✦</div>
-
-            <div class="contact-info">
-                <div class="contact-title">Contact Us</div>
-                <div class="contact-item">
-                    <i class="fas fa-phone"></i>
-                    <span>07048694977</span>
-                </div>
-                <!-- <div class="contact-item">
-                    <i class="fas fa-envelope"></i>
-                    <a href="mailto:oruma.daniel@gmail.com">oruma.daniel@gmail.com</a>
-                </div> -->
-            </div>
         </div>
 
         <div class="card-image-wrapper">
             <img src="images/image.jpeg" alt="Child Dedication" class="card-image">
+        </div>
+
+        <div class="contact-info">
+            <div class="contact-title">Contact Us</div>
+            <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <span>07048694977</span>
+            </div>
+            <!-- <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <a href="mailto:oruma.daniel@gmail.com">oruma.daniel@gmail.com</a>
+            </div> -->
         </div>
     </div>
 </body>
