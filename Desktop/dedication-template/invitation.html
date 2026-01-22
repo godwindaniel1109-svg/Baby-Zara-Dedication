@@ -17,26 +17,43 @@
 
         body {
             font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%);
+            background-image: url('images/image.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
             min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
             padding: 20px;
             margin: 0;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.3);
+            z-index: 0;
         }
 
         .invitation-card {
-            background: #ffffff;
+            background: burlywood;
             max-width: 720px;
             width: 100%;
             padding: 55px 50px;
             border-radius: 24px;
-            box-shadow: 0 25px 70px rgba(0, 0, 0, 0.5), 0 0 0 2px #1a1a1a;
+            box-shadow: 0 25px 70px rgba(0, 0, 0, 0.6), 0 0 0 3px rgba(139, 90, 43, 0.5);
             position: relative;
             overflow: hidden;
             text-align: center;
-            border: 3px solid #1a1a1a;
+            border: 3px solid rgba(139, 90, 43, 0.8);
+            z-index: 1;
         }
 
         .invitation-card::before {
@@ -46,7 +63,7 @@
             left: 0;
             right: 0;
             height: 6px;
-            background: linear-gradient(90deg, #1a1a1a 0%, #d4af37 50%, #1a1a1a 100%);
+            background: linear-gradient(90deg, rgba(139, 90, 43, 0.8) 0%, rgba(160, 82, 45, 0.9) 50%, rgba(139, 90, 43, 0.8) 100%);
             background-size: 200% 100%;
             animation: shimmer 3s ease-in-out infinite;
         }
@@ -68,34 +85,34 @@
         .decoration.top-left {
             top: -100px;
             left: -100px;
-            background: radial-gradient(circle, #1a1a1a 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(139, 90, 43, 0.15) 0%, transparent 70%);
             border-radius: 50%;
         }
 
         .decoration.bottom-right {
             bottom: -100px;
             right: -100px;
-            background: radial-gradient(circle, #d4af37 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(160, 82, 45, 0.15) 0%, transparent 70%);
             border-radius: 50%;
         }
 
         .title {
             font-family: 'Playfair Display', serif;
             font-size: 3em;
-            color: #1a1a1a;
+            color: #5a2d0c;
             margin-bottom: 22px;
             font-weight: 700;
             letter-spacing: 2.5px;
             position: relative;
             z-index: 1;
             line-height: 1.15;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.3);
         }
 
         .subtitle {
             font-family: 'Dancing Script', cursive;
             font-size: 1.75em;
-            color: #2d2d2d;
+            color: #4a2c1a;
             margin-bottom: 20px;
             line-height: 1.7;
             font-style: italic;
@@ -107,7 +124,7 @@
         .family-name {
             font-family: 'Playfair Display', serif;
             font-size: 2em;
-            color: #1a1a1a;
+            color: #5a2d0c;
             margin: 18px 0;
             font-weight: 600;
             font-style: italic;
@@ -120,12 +137,12 @@
         .divider {
             width: 140px;
             height: 3px;
-            background: linear-gradient(90deg, transparent, #1a1a1a 30%, #d4af37 50%, #1a1a1a 70%, transparent);
+            background: linear-gradient(90deg, transparent, rgba(139, 90, 43, 0.6) 30%, rgba(160, 82, 45, 0.9) 50%, rgba(139, 90, 43, 0.6) 70%, transparent);
             margin: 28px auto;
             position: relative;
             z-index: 1;
             border-radius: 2px;
-            box-shadow: 0 2px 8px rgba(26, 26, 26, 0.3);
+            box-shadow: 0 2px 8px rgba(90, 45, 12, 0.4);
         }
 
         .details {
@@ -139,7 +156,7 @@
         .detail-item {
             margin: 18px 0;
             font-size: 1.1em;
-            color: #1a1a1a;
+            color: #5a2d0c;
             line-height: 1.7;
             font-family: 'Poppins', sans-serif;
             padding: 8px 0;
@@ -147,7 +164,7 @@
 
         .detail-label {
             font-weight: 700;
-            color: #1a1a1a;
+            color: #4a1f0a;
             display: inline-block;
             margin-right: 12px;
             font-style: italic;
@@ -156,23 +173,23 @@
         }
 
         .detail-value {
-            color: #2d2d2d;
+            color: #5a2d0c;
             display: inline-block;
             word-break: break-word;
             font-style: italic;
-            font-weight: 400;
+            font-weight: 500;
         }
 
         .venue {
             font-style: italic;
-            color: #4a4a4a;
+            color: #6b3a1a;
         }
 
         .ornament {
             font-size: 1.8em;
-            color: #d4af37;
+            color: rgba(139, 90, 43, 0.9);
             margin: 18px 0;
-            opacity: 0.8;
+            opacity: 0.9;
             position: relative;
             z-index: 1;
             font-weight: 300;
@@ -181,19 +198,19 @@
         .contact-info {
             margin-top: 25px;
             padding: 25px 30px;
-            background: linear-gradient(135deg, rgba(26, 26, 26, 0.05) 0%, rgba(212, 175, 55, 0.08) 50%, rgba(26, 26, 26, 0.05) 100%);
+            background: linear-gradient(135deg, rgba(139, 90, 43, 0.15) 0%, rgba(160, 82, 45, 0.2) 50%, rgba(139, 90, 43, 0.15) 100%);
             border-radius: 16px;
-            border: 2px solid #1a1a1a;
+            border: 2px solid rgba(139, 90, 43, 0.6);
             font-family: 'Poppins', sans-serif;
             position: relative;
             z-index: 1;
-            box-shadow: 0 4px 15px rgba(26, 26, 26, 0.2);
+            box-shadow: 0 4px 15px rgba(90, 45, 12, 0.3);
         }
 
         .contact-title {
             font-family: 'Playfair Display', serif;
             font-size: 1.4em;
-            color: #1a1a1a;
+            color: #4a1f0a;
             margin-bottom: 16px;
             font-weight: 700;
             font-style: italic;
@@ -204,7 +221,7 @@
         .contact-item {
             margin: 12px 0;
             font-size: 1.2em;
-            color: #1a1a1a;
+            color: #5a2d0c;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -215,30 +232,34 @@
         }
 
         .contact-item i {
-            color: #d4af37;
+            color: rgba(139, 90, 43, 0.9);
             font-size: 1.5em;
         }
 
         .contact-item span {
-            color: #1a1a1a;
+            color: #5a2d0c;
             font-weight: 600;
             font-size: 1.1em;
         }
 
         .contact-item a {
-            color: #1a1a1a;
+            color: #5a2d0c;
             text-decoration: none;
             transition: all 0.3s ease;
             font-weight: 600;
         }
 
         .contact-item a:hover {
-            color: #d4af37;
+            color: rgba(139, 90, 43, 1);
         }
 
         @media print {
             body {
                 background: white;
+            }
+            
+            body::before {
+                display: none;
             }
             
             .invitation-card {
@@ -264,6 +285,7 @@
                 padding: 15px;
                 overflow-y: auto;
                 min-height: 100vh;
+                background-attachment: scroll;
             }
 
             .invitation-card {
@@ -332,6 +354,7 @@
                 align-items: flex-start;
                 padding-top: 20px;
                 padding-bottom: 20px;
+                background-attachment: scroll;
             }
 
             .invitation-card {
